@@ -9,5 +9,13 @@ require 'pry'
 # }
 
 def get_the_min(groceries)
-  #code your solution here!
+  min_grocery = ""
+  groceries.each {|department, grocery|
+    if(min_grocery == "" || ((min_grocery <=> grocery.min) == 1) )
+      min_grocery = grocery.min
+      binding.pry
+    end
+  }
+  min_grocery
+  #
 end
